@@ -15,6 +15,7 @@ fun main() {
         ReviewDB.createReviewTable()
     } catch (e: Exception) {
         println("Trouble with connecting DB")
+        return
     }
 
     var user: User? = AuthorizeDispatcher.authorize()
